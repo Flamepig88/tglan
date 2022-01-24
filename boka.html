@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="Header">
+        <div class="Navbar">
+          <ul>
+            <li class="text">
+              <a href="">Information</a>
+              <a href="">Boka nu</a>
+              <a href="contact.html">Kontakta oss</a>
+              <a href="">Logga in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="line2"></div>
+    </div>
+
+    <div class="Space">
+      <div class="contact-box">
+        <div class="left"></div>
+        <div class="right">
+          <form action="connect1.php" method="post">
+            <label for="username"> Namn*</label>
+            <input
+              type="text"
+              placeholder="Ditt namn"
+              id="username"
+              name="username"
+              required
+            />
+
+            <label for="email"> Email*</label>
+            <br />
+            <input
+              type="email"
+              placeholder="example@skola.botkyrka.se"
+              id="email"
+              name="email"
+              required
+            />
+            <label for="bio">Meddelande</label> <br />
+            <textarea
+              name="bio"
+              id="bio"
+              cols="30"
+              rows="10"
+              placeholder="Ställ din fråga här!"
+              required
+            ></textarea>
+            <label
+              ><b
+                >Genom att klicka "skicka in" så godkänner du att vi sparar dina
+                personuppgifter</b
+              ></label
+            >
+            <button class="btn">Skicka in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="Container">
+        <div class="Footer">
+          <ul>
+            <li class="text">
+              <h1>TG-LAN</h1>
+              <h5>Telefon</h5>
+              <p>08-530-610-00</p>
+              <h5>Adress</h5>
+              <p>Utbildningsvägen 2, 14740 Tumba</p>
+            </li>
+            <li class="text">
+              <h1>Hitta på sajten</h1>
+              <a href="">Information</a>
+              <a href="">Om oss</a>
+              <a href="">Kontaka Oss</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
