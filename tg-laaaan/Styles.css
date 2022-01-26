@@ -41,6 +41,7 @@ a {
   display: none;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 
 .Footer .text {
@@ -49,7 +50,7 @@ a {
   flex-direction: column;
   margin: 50px;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .line {
@@ -189,6 +190,8 @@ TABLET SIZE
 
   .Footer {
     display: block;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .Footer .text {
@@ -237,12 +240,21 @@ PC SIZE
 */
 
 @media only screen and (min-width: 1000px) {
-  .Footer .text {
-    margin-left: 450px;
+  .wrapper {
+    padding-top: 6.9%;
+    width: 1000px;
   }
 
-  .wrapper {
-    padding-top: 6%;
-    width: 1000px;
+  .contact-box {
+    width: 70%;
+  }
+
+  .right {
+    padding: 10px 13px 20px;
+  }
+
+  .Footer {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
