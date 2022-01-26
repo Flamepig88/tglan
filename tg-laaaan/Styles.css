@@ -19,7 +19,7 @@ a {
 .container {
   background-color: rgb(40, 40, 44);
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   display: none;
 }
@@ -206,6 +206,7 @@ TABLET SIZE
 
   .wrapper {
     padding-top: 20%;
+    padding-bottom: 20%;
     width: 750px;
     margin: 0 auto;
   }
