@@ -18,7 +18,20 @@ const results = [
   { name: "Nina", score: 82 },
 ];
 
-function getHighestScore()
+let currentHightest = { name: undefined, score: 0 };
+
+function getHighestScore() {}
+
+results.forEach(function (contestant) {
+  if (contestant.score > currentHightest.score) {
+    currentHightest.name = contestant.name;
+    currentHightest.score = contestant.score;
+  }
+});
+
+console.log(
+  `Den deltagaren som vann är ${currentHightest.name} med ${currentHightest.score} poäng`
+);
 
 //array.forEach(function(element) {
 //})
