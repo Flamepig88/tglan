@@ -56,3 +56,32 @@ console.log(
 //let totalIncome = 0;
 
 //account.incomes.forEach((income) => {});
+
+/* 
+
+  benis sak
+
+*/
+
+const account = {
+  income: [25000, 25000, 25000, 25000, 25000, 25000],
+  expenses: [18900, 23878, 28032, 21238, 24003, 23209],
+};
+
+let totalIncome = 0;
+
+let totalExpenses = 0;
+
+const balance = 0;
+
+for (let i = 0; i < account.income.length; i++) {
+  totalIncome += account.income[i];
+}
+
+for (let i = 0; i < account.expenses.length; i++) {
+  totalExpenses += account.expenses[i];
+}
+
+console.log(`Income: ${totalIncome}`);
+console.log(`Expenses: ${totalExpenses}`);
+console.log(`Balance: ${totalIncome - totalExpenses}`);
