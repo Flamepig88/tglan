@@ -29,11 +29,11 @@ console.log(divsWithClass)
 
 // ----- querySelectorAll ----- return NodeList
 
-const divsWithQuerySelectorAll = document.querySelector(".divs")
+const divsWithQuerySelectorAll = document.querySelector("div.divs#container")
 
 console.log(divsWithQuerySelectorAll)
 
-divContainer.addEventListener("mouseenter" e => {
+divContainer.addEventListener("mouseenter", e => {
     e.target.innerText = "Hallå där"
 })
 
