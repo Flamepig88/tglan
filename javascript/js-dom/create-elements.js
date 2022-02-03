@@ -17,7 +17,8 @@ container.appendChild(linkEl)
 // Lägga till CSS klasser
 linkEl.classList = "link"
 
-document.querySelector("#container").innerHTML = "<a href='https://google.com'>Besök här!</a>"
+document.querySelector("#container").innerHTML = 
+"<a href='https://google.com'>Besök här!</a>"
 
 
 // container.querySelector("#para").className = "para"
