@@ -120,7 +120,7 @@ h2:after {
   background-color: rgba(34, 34, 34, 0.795);
   padding: 0.5rem 0.5rem;
   font-size: 1rem;
-  transition: 0.2s;
+  transition: 0.15s;
   border-radius: 6px;
   margin: 20px 0px 0px;
 }
@@ -241,7 +241,7 @@ PC SIZE
 
 @media only screen and (min-width: 1000px) {
   .wrapper {
-    padding-top: 6.9%;
+    padding-top: 10%;
     width: 1000px;
   }
 
@@ -249,12 +249,13 @@ PC SIZE
     width: 70%;
   }
 
-  .right {
-    padding: 10px 13px 20px;
-  }
+   .right {
+    padding: 25px 30px 35px;
+  } 
 
   .Footer {
     display: flex;
     flex-wrap: wrap;
+    position: static;
   }
 }
