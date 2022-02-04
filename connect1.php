@@ -3,7 +3,7 @@
     $email = $_POST['email'];
     $bio = $_POST['bio'];
 
-    //Database Connection
+    // Database Connection
     $conn = new mysqli('localhost', 'root', '', 'boka');
     if($conn->connect_error){
         die('Connection Failed  : '.$conn->connect_error);

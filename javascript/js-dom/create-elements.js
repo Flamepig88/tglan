@@ -15,8 +15,11 @@ linkEl.setAttribute("href", "https://www.google.com")
 container.appendChild(linkEl)
 
 // Lägga till CSS klasser
-linkEl.classList = "link"
+// linkEl.classList = "link" // Endast för en klass
+linkEl.classList.add("link")
+linkEl.classList.add("vadsomhelst")
 
+// Använd alternativt sledgehammern innerHTML
 document.querySelector("#container").innerHTML = 
 "<a href='https://google.com'>Besök här!</a>"
 

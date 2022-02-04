@@ -189,9 +189,9 @@ TABLET SIZE
   }
 
   .Footer {
-    display: block;
     display: flex;
     flex-wrap: wrap;
+    position: static;
   }
 
   .Footer .text {
@@ -200,7 +200,6 @@ TABLET SIZE
     flex-direction: column;
     margin: 15px;
     align-items: flex-start;
-    margin-left: 90px;
   }
 
   .Navbar li {
