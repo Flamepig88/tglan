@@ -24,11 +24,15 @@ a {
   display: none;
 }
 
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .Navbar li {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 25px;
-  margin-right: 50px;
 }
 
 .Footer {
@@ -232,6 +236,107 @@ TABLET SIZE
   }
 }
 
+.content {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.information1 {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(40, 40, 40);
+  box-shadow: 0px 0px 8px 5px rgba(22, 173, 184, 0.19);
+  border-radius: 5px;
+  width: 300px;
+  height: 450px;
+  margin-top: 200px;
+}
+
+.information2 {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(40, 40, 40);
+  box-shadow: 0px 0px 8px 5px rgba(22, 173, 184, 0.19);
+  border-radius: 5px;
+  width: 300px;
+  height: 450px;
+  margin-top: 200px;
+}
+
+.information1 header {
+  font-size: 30px;
+  position: absolute;
+  color: white;
+  margin-top: 10px;
+}
+
+.information2 header {
+  font-size: 30px;
+  position: absolute;
+  color: white;
+  margin-top: 10px;
+}
+
+.information1 li {
+  margin-top: 255px;
+  position: absolute;
+  list-style: none;
+  font-size: 20px;
+  color: white;
+  margin-left: -307.5px;
+  background-color: rgba(34, 34, 34, 0.795);
+  padding: 10px 81.25px 145px 81.25px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 1px rgba(22, 173, 184, 0.19);
+}
+
+.information2 li {
+  margin-top: 255px;
+  position: absolute;
+  list-style: none;
+  font-size: 20px;
+  color: white;
+  margin-left: -305px;
+  background-color: rgba(34, 34, 34, 0.795);
+  padding: 10px 95px 145px 95px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 1px rgba(22, 173, 184, 0.19);
+}
+
+.information1 header:after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: rgb(0, 240, 255);
+}
+
+.information2 header:after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: rgb(0, 240, 255);
+}
+
+.image {
+  margin-top: 85px;
+  margin-left: 40px;
+  box-shadow: 0px 0px 8px 5px rgb(24, 24, 24);
+  border-radius: 5px;
+}
+
+.logo {
+  position: absolute;
+  margin-top: -25px;
+}
 /* 
 
 PC SIZE
@@ -248,13 +353,17 @@ PC SIZE
     width: 70%;
   }
 
-   .right {
+  .right {
     padding: 25px 30px 35px;
-  } 
+  }
 
   .Footer {
     display: flex;
     flex-wrap: wrap;
     position: static;
+  }
+  .logo {
+    position: absolute;
+    margin-top: -25px;
   }
 }

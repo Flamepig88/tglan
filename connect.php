@@ -15,5 +15,7 @@
         echo "Din förfrågan har skickats in! Du kan stänga ner detta fönster.";
         $stmt->close();
         $conn->close();
+        header('Location: contact.html');
+        exit;
     }
 ?>
