@@ -6,7 +6,7 @@
 // });
 
 function changeStyle() {
-  var element = document.getElementById("text");
+  const element = document.getElementById("text");
   document.getElementById("text").style.color = "blue";
   document.getElementById("text").style.fontFamily = "arial";
   document.getElementById("text").style.fontSize = "50px";

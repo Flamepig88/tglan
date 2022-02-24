@@ -7,7 +7,6 @@ const todos = [
 
 const todosContainer = document.querySelector("#todos-container");
 const todosForm = document.querySelector("#todos-form");
-
 //Hjälpfunktion som returnerar DOM:en för en todo
 function generateTodoDOM(todo) {
   //TODO: skapa checkbox och lägg till event-lyssnare på den
@@ -50,18 +49,14 @@ function renderTodos(todos) {
 //Appen
 todosForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const input = document.querySelector("#fname");
-  todos.push({ text: input.value, completed: false });
-  input.value = "";
+  const inputOne = document.querySelector("#fname");
+  const inputTwo = document.querySelector("#lname")
+  todos.push({ text: inputOne.value + " " + inputTwo.value, completed: false });
+  inputOne.value = "";
+  inputTwo.value = "";
   renderTodos(todos);
 });
 
-todosForm.addEventListener("submit", (event) => {
-  const input = document.querySelector("#lname");
-  todos.push({ text: input.value, completed: false });
-  input.value = "";
-  renderTodos(todos);
-});
 
 renderTodos(todos);
 generateTodoSummary(todos);
