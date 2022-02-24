@@ -16,6 +16,15 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: rgb(4, 180, 192);
+  transition: 0.3s;
+}
+
+.active {
+  color: rgb(26, 156, 243);
+}
+
 .container {
   background-color: rgb(40, 40, 44);
   width: 100%;
@@ -32,7 +41,7 @@ a {
 .Navbar li {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .Navbar a {
@@ -88,7 +97,7 @@ margin-right: 60px;
 }
 
 .contact-box {
-  border-radius: 5px;
+  border-radius: 3px;
   width: 90%;
   display: grid;
   grid-template-columns: (1, 1fr);
