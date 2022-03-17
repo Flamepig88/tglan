@@ -28,53 +28,26 @@
   })
 
   // LÄGG TILL BILD
-  // const image_btn = document.querySelector("#image_btn");
-  // image_btn.addEventListener("change", function() {
-  // const reader = new FileReader();
-  // reader.addEventListener("load", () => {
-  // const uploaded_image = reader.result;
-  // document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
-  // });
-  //  reader.readAsDataURL(this.files[0]);
-  // });
+  const image_btn = document.querySelector("#image_btn");
+  image_btn.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+  const uploaded_image = reader.result;
+  document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+  });
+   reader.readAsDataURL(this.files[0]);
+  });
 
   // LÄGG TILL BILD
-  // const image_btn2 = document.querySelector("#image_btn2");
-  // image_btn2.addEventListener("change", function() {
-  // const reader = new FileReader();
-  // reader.addEventListener("load", () => {
-  // const uploaded_image = reader.result;
-  // document.querySelector("#display_image2").style.backgroundImage = `url(${uploaded_image})`;
-  // });
-  //  reader.readAsDataURL(this.files[0]);
-  // });
-
-  const picButton = document.createElement('picButton')
-  picButton.innerText = 'add'
-  picButton.classList.add('picBtn')
-
-  picButton.addEventListener('click', e => {
-    image_btn2.addEventListener("change", function() {
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-    const uploaded_image = reader.result;
-    document.querySelector("#display_image2").style.backgroundImage = `url(${uploaded_image})`;
-    })
-     reader.readAsDataURL(this.files[0]);
-    })
-
-    const span = document.createElement('span')
-    span.innerText = todo.text
-
-    const li = document.createElement('li')
-
-    li.appendChild(checkbox)
-    li.appendChild(span)
-    li.appendChild(picButton)
-  
-    return li
-
-  })
+  const image_btn2 = document.querySelector("#image_btn2");
+  image_btn2.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+  const uploaded_image = reader.result;
+  document.querySelector("#display_image2").style.backgroundImage = `url(${uploaded_image})`;
+  });
+   reader.readAsDataURL(this.files[0]);
+  });
 
   //Ta bort en todo
   const button = document.createElement('button')
