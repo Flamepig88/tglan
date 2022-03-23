@@ -18,3 +18,4 @@ spec:
       containers:
         - name: minapache2-server
           image: 31c0b5f83396
+          imagePullPolicy: Never
