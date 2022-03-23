@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabi-deploy-2
+  labels:
+    app: rabi-deploy-2
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: rabi-deploy-2
+  template:
+    metadata:
+      name: apacheserver
+      labels:
+        app: rabi-deploy-2
+    spec:
+      containers:
+        - name: minapache2-server
+          image: 31c0b5f83396

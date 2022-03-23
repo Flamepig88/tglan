@@ -1,0 +1,10 @@
+apiVersion: v1 #Version på api
+kind: Pod #Vad det är för typ av objekt som ska skapas
+metadata: #Info om pod
+  name: rabipod #Namn på pod
+  labels:
+    pod: rabipod #Taggar till pods
+spec:
+  containers: #Info om containrar
+    - name: rabicontainer #Namn på container
+      image: nginx #Vilken image man vill köra på containern
