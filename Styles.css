@@ -10,23 +10,47 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-a.indexlinker{
-  color: rgb(0, 240, 255);
+
+.link-top {
+  width: 9%;
+  padding: 0.5rem 0rem;
+  background-color: #d5549c;
+  color: rgb(0, 0, 0);
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 4px;
+  text-align: center;
   text-decoration: none;
-  padding-bottom:px;
 }
+
+.link-top:hover {
+  background-color: #f5a7d2;
+  color: black;
+  transition: 0.3s;
+}
+
+.link-top:active {
+  background-color: #f5a7d2;
+}
+
 a {
-  color: rgb(0, 240, 255);
+  color: #d5549c;
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(4, 180, 192);
-  transition: 0.3s;
+  color: #f5a7d2;
 }
 
 .active {
-  color: rgb(26, 156, 243);
+  color: #f5a7d2;
+}
+
+#active2 {
+  background-color: #f5a7d2;
 }
 
 .container {
@@ -75,17 +99,10 @@ margin-right: 60px;
 }
 
 .line {
-  background-color: rgb(0, 240, 255);
+  background-color: #d5549c;
   height: 2px;
   width: 100%;
   margin-top: 29px;
-}
-
-.line2 {
-  background-color: rgb(0, 100, 100);
-  height: 2px;
-  width: 100%;
-  box-shadow: 0px 0px 40px black;
 }
 /* 
 
@@ -109,7 +126,7 @@ margin-right: 60px;
   align-items: center;
   text-align: center;
   background-color: rgb(40, 40, 44);
-  box-shadow: 0px 0px 5px 3px rgba(5, 200, 214, 0.19);
+  box-shadow: 0px 0px 5px 3px #632949;
 }
 
 .right {
@@ -131,7 +148,7 @@ h2:after {
   height: 4px;
   width: 66%;
   border-radius: 2px;
-  background-color: rgb(0, 240, 255);
+  background-color: #d5549c;
 }
 
 .field {
@@ -157,10 +174,14 @@ textarea {
   color: #fff;
 }
 
+#klass {
+  color: rgb(167, 158, 158);
+}
+
 .btn {
   width: 100%;
   padding: 0.5rem 1rem;
-  background-color: rgb(0, 240, 255);
+  background-color: #d5549c;
   color: rgb(0, 0, 0);
   font-size: 1.1rem;
   border: none;
@@ -172,11 +193,11 @@ textarea {
 }
 
 .btn:hover {
-  background-color: rgb(4, 180, 192);
+  background-color: #f5a7d2;
 }
 
 .field:focus {
-  border: 2px solid rgb(0, 240, 255);
+  border: 2px solid #632949;
   background-color: rgb(44, 43, 43);
 }
 
@@ -266,7 +287,7 @@ TABLET SIZE
   display: flex;
   justify-content: center;
   background-color: rgb(40, 40, 40);
-  box-shadow: 0px 0px 8px 5px rgba(22, 173, 184, 0.19);
+  box-shadow: 0px 0px 8px 5px #632949;
   border-radius: 5px;
   width: 300px;
   height: 450px;
@@ -277,7 +298,7 @@ TABLET SIZE
   display: flex;
   justify-content: center;
   background-color: rgb(40, 40, 40);
-  box-shadow: 0px 0px 8px 5px rgba(22, 173, 184, 0.19);
+  box-shadow: 0px 0px 8px 5px #632949;
   border-radius: 5px;
   width: 300px;
   height: 450px;
@@ -308,7 +329,7 @@ TABLET SIZE
   background-color: rgba(34, 34, 34, 0.795);
   padding: 10px 81.25px 145px 81.25px;
   border-radius: 5px;
-  box-shadow: 0px 0px 3px 1px rgba(22, 173, 184, 0.19);
+  box-shadow: 0px 0px 3px 1px #632949;
 }
 
 .information2 li {
@@ -321,7 +342,7 @@ TABLET SIZE
   background-color: rgba(34, 34, 34, 0.795);
   padding: 10px 95px 145px 95px;
   border-radius: 5px;
-  box-shadow: 0px 0px 3px 1px rgba(22, 173, 184, 0.19);
+  box-shadow: 0px 0px 3px 1px #632949;
 }
 
 .information1 header:after {
@@ -332,7 +353,7 @@ TABLET SIZE
   height: 4px;
   width: 100%;
   border-radius: 2px;
-  background-color: rgb(0, 240, 255);
+  background-color: #d5549c;
 }
 
 .information2 header:after {
@@ -343,7 +364,7 @@ TABLET SIZE
   height: 4px;
   width: 100%;
   border-radius: 2px;
-  background-color: rgb(0, 240, 255);
+  background-color: #d5549c;
 }
 
 .image {
@@ -384,6 +405,7 @@ PC SIZE
   }
   .logo {
     position: absolute;
-    margin-top: -25px;
+    margin-top: -20px;
+    margin-left: 10px;
   }
 }

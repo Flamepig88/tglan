@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boka</title>
     <link rel="stylesheet" href="Styles.css" />
   </head>
@@ -23,9 +20,9 @@
               height="auto"
           <ul>
             <li class="text">
-              <a href="information.html">Information</a>
-              <a href="" class="active">Boka nu</a>
-              <a href="contact.html">Kontakta oss</a>
+              <a class="link-top" href="information.html">Information</a>
+              <a class="link-top" href="" id="active2">Boka nu</a>
+              <a class="link-top" href="contact.html">Kontakta oss</a>
             </li>
           </ul>
         </div>
@@ -59,6 +56,13 @@
                 required
                 class="field"
               />
+              <label for="klass">Välj en klass:</label>
+              <select id="klass" name="klass" class="field" required>
+                <option value="EE20C">EE20C</option>
+                <option value="EE20A">EE20A</option>
+                <option value="EE20B">EE20B</option>
+              </select>
+
               <label for="bio">Ställ din fråga:</label>
               <textarea
                 name="bio"
@@ -88,9 +92,9 @@
             <li class="text">
               <h1>TG-LAN</h1>
               <h5>Telefon</h5>
-              <p>08-530-610-00</p>
+              <a href="tel:08-530-610-00">08-530-610-00</a> 
               <h5>Adress</h5>
-              <p>Utbildningsvägen 2, 14740 Tumba</p>
+              <a href="https://goo.gl/maps/6ou5gqGfvXipvT147">Utbildningsvägen 2, 14740 Tumba</a>
             </li>
             <li class="text">
               <h1>Hitta på sajten</h1>
