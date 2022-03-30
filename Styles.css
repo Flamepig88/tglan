@@ -73,7 +73,7 @@ a:hover {
 }
 
 .Navbar a {
-margin-right: 60px;
+  margin-right: 60px;
 }
 
 .Footer {
@@ -99,6 +99,13 @@ margin-right: 60px;
 }
 
 .line {
+  background-color: #d5549c;
+  height: 2px;
+  width: 100%;
+  margin-top: 29px;
+}
+
+.line2 {
   background-color: #d5549c;
   height: 2px;
   width: 100%;
@@ -175,7 +182,7 @@ textarea {
 }
 
 #klass {
-  color: rgb(167, 158, 158);
+  color: rgb(255, 255, 255);
 }
 
 .btn {
@@ -202,12 +209,11 @@ textarea {
 }
 
 label {
-  color: rgb(167, 158, 158);
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: left;
   margin-top: 15px;
   margin-left: 3px;
-  
 }
 
 info {
@@ -283,43 +289,25 @@ TABLET SIZE
   justify-content: space-evenly;
 }
 
-.information1 {
+/* .information1 {
   display: flex;
   justify-content: center;
   background-color: rgb(40, 40, 40);
-  box-shadow: 0px 0px 8px 5px #632949;
+  box-shadow: 0px 0px 5px 3px #632949;
   border-radius: 5px;
   width: 300px;
   height: 450px;
   margin-top: 200px;
-}
+} */
 
-.information2 {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(40, 40, 40);
-  box-shadow: 0px 0px 8px 5px #632949;
-  border-radius: 5px;
-  width: 300px;
-  height: 450px;
-  margin-top: 200px;
-}
-
-.information1 header {
+/* .information1 header {
   font-size: 30px;
   position: absolute;
   color: white;
   margin-top: 10px;
-}
+} */
 
-.information2 header {
-  font-size: 30px;
-  position: absolute;
-  color: white;
-  margin-top: 10px;
-}
-
-.information1 li {
+/* .information1 li {
   margin-top: 255px;
   position: absolute;
   list-style: none;
@@ -330,22 +318,9 @@ TABLET SIZE
   padding: 10px 81.25px 145px 81.25px;
   border-radius: 5px;
   box-shadow: 0px 0px 3px 1px #632949;
-}
+} */
 
-.information2 li {
-  margin-top: 255px;
-  position: absolute;
-  list-style: none;
-  font-size: 20px;
-  color: white;
-  margin-left: -305px;
-  background-color: rgba(34, 34, 34, 0.795);
-  padding: 10px 95px 145px 95px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 3px 1px #632949;
-}
-
-.information1 header:after {
+/* .information1 header:after {
   content: "";
   position: absolute;
   left: 0%;
@@ -354,6 +329,38 @@ TABLET SIZE
   width: 100%;
   border-radius: 2px;
   background-color: #d5549c;
+} */
+
+.information2 {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(40, 40, 44);
+  box-shadow: 0px 0px 5px 3px #632949;
+  border-radius: 3px;
+  width: 1000px;
+  height: 1000px;
+}
+
+.information2 li {
+  width: 950px;
+  height: 750px;
+  margin-top: 220px;
+  position: absolute;
+  list-style: none;
+  font-size: 20px;
+  color: white;
+  margin-left: -505px;
+  background-color: rgba(34, 34, 34, 0.795);
+  padding: 10px 95px 145px 95px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px 1px #632949;
+}
+
+.information2 header {
+  font-size: 30px;
+  position: absolute;
+  color: white;
+  margin-top: 10px;
 }
 
 .information2 header:after {
@@ -367,17 +374,13 @@ TABLET SIZE
   background-color: #d5549c;
 }
 
-.image {
+/* .image {
   margin-top: 85px;
   margin-left: 40px;
   box-shadow: 0px 0px 8px 5px rgb(24, 24, 24);
   border-radius: 5px;
-}
+} */
 
-.logo {
-  position: absolute;
-  margin-top: -25px;
-}
 /* 
 
 PC SIZE
@@ -406,6 +409,10 @@ PC SIZE
   .logo {
     position: absolute;
     margin-top: -20px;
-    margin-left: 10px;
+    margin-left: 15px;
+  }
+
+  .link-top {
+    margin-top: -15px;
   }
 }
