@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
         - name: rabi-container
-          image: nginx:latest
+          image: 31c0b5f83396:banan
