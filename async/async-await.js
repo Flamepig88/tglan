@@ -1,106 +1,57 @@
-/* ------- Exempel 1---------- */
+  const button = document.querySelector('.button')
+  const inputValue = document.querySelector('.inputValue')
 
-// function printData(title) {
-//   const pEl = document.createElement('p')
-//   pEl.textContent = title
-//   document.body.appendChild(pEl)
-// }
 
-// fetch('https://jsonplaceholder.typicode.com/posts')
-//   .then(res => {
-//     return res.json()
-//   })
-//   .then(data => {
-//     data.forEach(item => {
-//       printData(item.title)
-//     })
-//   })
-//   .catch(err => console.log(err))
-
-/* ------- Exempel 2---------- */
-
-function printWeather() {
-  document.querySelector("#weather-container").innerHTML = "";
+button.addEventListener('click', function () {
   fetch(
-    "http://api.weatherapi.com/v1/current.json?key=f74998a310f641339ec123218220104%20&q=Sweden,%20Gothenburg&aqi=no"
+    'http://api.weatherapi.com/v1/current.json?key=f74998a310f641339ec123218220104%20&q='+inputValue.value+'&aqi=no&lang=sv'
   )
     .then((res) => {
       return res.json();
     })
-    .then((data) => {
-      const location = data.location.country;
-      const iconUrl = data.current.condition.icon;
-      const weather = data.current.temp_c;
-      const time = data.location.localtime;
-      const weatherCondition = data.current.condition.text;
+    .then(data => {
 
-      const weatherContainer = document.querySelector("#weather-container");
+    const weatherContainer = document.querySelector(".weather-container");
 
-      const imgEl = document.createElement("img");
-      imgEl.setAttribute("src", iconUrl);
+    const countryName = data.location.country;
+    const cityName = data.location.name;
+    const iconUrl = data.current.condition.icon;
+    const weather = data.current.temp_c;
+    const time = data.location.localtime;
+    const weatherCondition = data.current.condition.text;
+    const feelsLike = data.current.feelslike_c;
 
-      const textEl = document.createElement("h2");
-      textEl.textContent = weather;
+    const imgEl = document.createElement("img");
+    imgEl.setAttribute("src", iconUrl);
 
-      const textEl2 = document.createElement("h2");
-      textEl2.textContent = location;
+    const textEl = document.createElement("h2");
+    textEl.textContent = weather;
 
-      const textEl3 = document.createElement("h2");
-      textEl3.textContent = time;
+    const textEl2 = document.createElement("h2");
+    textEl2.textContent = countryName;
 
-      const textEl4 = document.createElement("h2");
-      textEl4.textContent = weatherCondition;
+    const textEl6 = document.createElement("h2");
+    textEl6.textContent = cityName;
 
-      weatherContainer.appendChild(imgEl);
-      weatherContainer.appendChild(textEl);
-      weatherContainer.appendChild(textEl2);
-      weatherContainer.appendChild(textEl3);
-      weatherContainer.appendChild(textEl4);
-    })
-    .catch((err) => console.log(err));
-}
+    const textEl3 = document.createElement("h2");
+    textEl3.textContent = time;
 
-document.querySelector("#btn").addEventListener("click", printWeather);
+    const textEl4 = document.createElement("h2");
+    textEl4.textContent = weatherCondition;
 
-function printWeatherSpain() {
-  document.querySelector("#weather-container1").innerHTML = "";
-  fetch(
-    "http://api.weatherapi.com/v1/current.json?key=f74998a310f641339ec123218220104&q=Spain&aqi=no"
-  )
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      const location1 = data.location.country;
-      const iconUrl1 = data.current.condition.icon;
-      const weather1 = data.current.temp_c;
-      const time = data.location.localtime;
-      const weatherCondition = data.current.condition.text;
+    const textEl5 = document.createElement("h2");
+    textEl5.textContent = feelsLike;
 
-      const weatherContainer = document.querySelector("#weather-container1");
+    weatherContainer.appendChild(imgEl);
+    weatherContainer.appendChild(textEl);
+    weatherContainer.appendChild(textEl5);
+    weatherContainer.appendChild(textEl2);
+    weatherContainer.appendChild(textEl6);
+    weatherContainer.appendChild(textEl3);
+    weatherContainer.appendChild(textEl4);
+    
+})
+document.querySelector(".weather-container").innerHTML = "";
+})
 
-      const imgEl = document.createElement("img");
-      imgEl.setAttribute("src", iconUrl1);
-
-      const textEl = document.createElement("h2");
-      textEl.textContent = weather1;
-
-      const textEl2 = document.createElement("h2");
-      textEl2.textContent = location1;
-
-      const textEl3 = document.createElement("h2");
-      textEl3.textContent = time;
-
-      const textEl4 = document.createElement("h2");
-      textEl4.textContent = weatherCondition;
-
-      weatherContainer.appendChild(imgEl);
-      weatherContainer.appendChild(textEl);
-      weatherContainer.appendChild(textEl2);
-      weatherContainer.appendChild(textEl3);
-      weatherContainer.appendChild(textEl4);
-    })
-    .catch((err) => console.log(err));
-}
-
-document.querySelector("#btn1").addEventListener("click", printWeatherSpain);
+//hjälp av beni
