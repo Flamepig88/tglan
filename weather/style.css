@@ -13,7 +13,7 @@ h3 {
   font-weight: 400;
 }
 
-.weather-app {
+.weather-container {
   min-height: 100vh;
   background-image: url(./images/day/cloudy.jpg);
   background-position: center;
@@ -27,7 +27,7 @@ h3 {
 }
 
 /*Add background overlay*/
-.weather-app::before {
+.weather-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -79,7 +79,7 @@ h3 {
   margin: 0.5em 0;
 }
 
-.panel {
+.side-panel {
   position: absolute;
   width: 40%;
   height: 100%;
@@ -95,7 +95,7 @@ h3 {
   overflow-y: scroll;
 }
 
-.panel form {
+.side-panel form {
   margin-bottom: 3em;
 }
 
@@ -137,18 +137,18 @@ h3 {
   color: #ccc;
 }
 
-.panel ul {
+.side-panel ul {
   padding: 0 0 1em 0;
   margin: 2em 0;
   border-bottom: 1px #ccc solid;
 }
 
-.panel ul li {
+.side-panel ul li {
   color: #ccc;
   margin: 2.5em 0;
 }
 
-.panel ul h4 {
+.side-panel ul h4 {
   margin: 3em 0;
 }
 
@@ -177,7 +177,7 @@ h3 {
 }
 
 @media screen and (max-width: 800px) {
-  .panel,
+  .side-panel,
   .container {
     position: relative;
     width: 100%;

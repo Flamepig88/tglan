@@ -1,5 +1,5 @@
-//Get all necessary elements from the DOM
-const app = document.querySelector(".weather-app");
+//Hämta alla element från HTML filen
+const app = document.querySelector(".weather-container");
 const temp = document.querySelector(".temp");
 const dateOutput = document.querySelector(".date");
 const timeOutput = document.querySelector(".time");
@@ -9,13 +9,13 @@ const icon = document.querySelector(".icon");
 const cloudOutput = document.querySelector(".cloud");
 const humidityOutput = document.querySelector(".humidity");
 const windOutput = document.querySelector(".wind");
-const form = document.getElementById("locationInput");
+const form = document.getElementById("location-input");
 const search = document.querySelector(".search");
 const btn = document.querySelector(".submit");
 const cities = document.querySelectorAll(".city");
 
-//Default city when the page loads
-let cityInput = "London";
+//Första staden som laddas in
+let cityInput = "Södertälje";
 
 //Add click event to each city in the panel
 cities.forEach((city) => {
@@ -36,7 +36,7 @@ form.addEventListener("submit", (e) => {
   /*If the input field (search bar) 
   is empty, throw an alert*/
   if (search.value.length == 0) {
-    alert("Skriv in en stad");
+    alert("Skriv in en giltlig stad");
   } else {
     /*Change from default city to the 
     one written in the input field*/
@@ -50,7 +50,6 @@ form.addEventListener("submit", (e) => {
     //Fade out the app (simple animation)
     app.style.opacity = "0";
   }
-
   //Prevents the default behaviour of the form
   e.preventDefault();
 });
@@ -60,13 +59,13 @@ form.addEventListener("submit", (e) => {
 We will use this function later*/
 function dayOfTheWeek(day, month, year) {
   const weekday = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
+    "Söndag",
+    "Måndag",
+    "Tisdag",
+    "Onsdag",
+    "Torsdag",
+    "Fredag",
+    "Lördag",
   ];
   return weekday[new Date(`${day}/${month}/${year}`).getDay()];
 }
@@ -95,8 +94,8 @@ the city name with template literals*/
     the day, month, year and time into individual variables*/
       const date = data.location.localtime;
       const y = parseInt(date.substr(0, 4));
-      const d = parseInt(date.substr(5, 2));
       const m = parseInt(date.substr(8, 2));
+      const d = parseInt(date.substr(5, 2));
       const time = date.substr(11);
 
       /*Reformat the date into somehing more 
