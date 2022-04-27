@@ -76,7 +76,7 @@ function fetchWeatherData() {
   /*Fetch the data and dynamicaly add 
 the city name with template literals*/
   fetch(
-    `https://api.weatherapi.com/v1/current.json?key=e0c1a083d9094ababd0211848210510&q=${cityInput}&lang=sv`
+    `https://api.weatherapi.com/v1/forecast.json?key=f74998a310f641339ec123218220104&q=${cityInput}&days=7&aqi=no&alerts=no&lang=sv`
   )
     /*Take the data (Which is in JSON format) 
   and convert it to a regular JS object*/
@@ -199,7 +199,7 @@ the city name with template literals*/
     /*If the user types a city that doesn't exist, 
   throw an alert*/
     .catch(() => {
-      alert("City not found, please try again");
+      alert("Staden hittades inte, försök igen");
       app.style.opacity = "1";
     });
 }

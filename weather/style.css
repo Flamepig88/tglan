@@ -13,6 +13,27 @@ h3 {
   font-weight: 400;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(110, 110, 110, 0.25);
+  backdrop-filter: blur (3px);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(70, 63, 63);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .weather-container {
   min-height: 100vh;
   background-image: url(./images/day/cloudy.jpg);
@@ -41,9 +62,9 @@ h3 {
 .container {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 10%;
+  left: 33.5%;
+  width: 40%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -79,23 +100,23 @@ h3 {
   margin: 0.5em 0;
 }
 
-.side-panel {
+.side-panel-1 {
   position: absolute;
-  width: 30%;
-  height: 100%;
+  width: 20%;
+  height: 51.3%;
   top: 0;
   right: 0;
+  border-radius: 5px;
   background: rgba(110, 110, 110, 0.25);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   z-index: 1;
   padding: 3em 2em;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
-.side-panel form {
+.side-panel-1 form {
   margin-bottom: 3em;
 }
 
@@ -112,6 +133,54 @@ h3 {
   cursor: pointer;
   font-size: 1.2em;
   transition: 0.4s;
+}
+
+.side-panel-2 {
+  position: absolute;
+  width: 28%;
+  height: 26%;
+  top: 20%;
+  right: 36%;
+  border-radius: 5px;
+  background: rgba(110, 110, 110, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+  padding: 0em 2em;
+  overflow-y: auto;
+}
+
+.side-panel-3 {
+  position: absolute;
+  width: 28%;
+  height: 26%;
+  top: 47%;
+  right: 36%;
+  border-radius: 5px;
+  background: rgba(110, 110, 110, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+  padding: 0em 2em;
+  overflow-y: auto;
+}
+
+.side-panel-4 {
+  position: absolute;
+  width: 100%;
+  height: 23%;
+  top: 77%;
+  right: 0%;
+  border-radius: 5px;
+  background: rgba(110, 110, 110, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+  padding: 0em 2em;
+  overflow-y: auto;
 }
 
 .submit:hover {
@@ -137,19 +206,60 @@ h3 {
   color: #ccc;
 }
 
-.side-panel ul {
-  padding: 0 0 1em 0;
-  margin: 2em 0;
-  border-bottom: 1px #ccc solid;
+.side-panel-1 ul {
+  padding: 0 0 0 0;
+  margin: -0.5em 0;
 }
 
-.side-panel ul li {
+.side-panel-1 ul li {
   color: #ccc;
-  margin: 2.5em 0;
+  margin: 1em 0;
 }
 
-.side-panel ul h4 {
+.side-panel-1 ul h4 {
   margin: 3em 0;
+}
+
+.side-panel-2 ul {
+  padding: 0 0 0 0;
+  margin: -0.5em 0;
+}
+
+.side-panel-2 ul li {
+  color: #ccc;
+  margin: 1em 0;
+}
+
+.side-panel-2 ul h4 {
+  margin: 3em 0;
+}
+
+.side-panel-3 ul {
+  padding: 0 0 0 0;
+  margin: -0.5em 0;
+}
+
+.side-panel-3 ul li {
+  color: #ccc;
+  margin: 1em 0;
+}
+
+.side-panel-3 ul h4 {
+  margin: 2em 0;
+}
+
+.side-panel-4 ul {
+  padding: 0 0 0 0;
+  margin: -0.5em 0;
+}
+
+.side-panel-4 ul li {
+  color: #ccc;
+  margin: 1em 0;
+}
+
+.side-panel-4 ul h4 {
+  margin: 2em 0;
 }
 
 .city {
@@ -167,6 +277,18 @@ h3 {
   align-items: center;
 }
 
+.all-day li {
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.week li {
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media screen and (max-width: 1000px) {
   html {
     font-size: 14px;
@@ -177,7 +299,8 @@ h3 {
 }
 
 @media screen and (max-width: 800px) {
-  .side-panel,
+  .side-panel-1,
+  .side-panel-2,
   .container {
     position: relative;
     width: 100%;
