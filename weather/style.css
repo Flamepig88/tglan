@@ -38,15 +38,14 @@ h3 {
 
 .weather-container {
   min-height: 100vh;
-  background-image: url(./images/day/cloudy.jpg);
+  background-image: url(./images/day/molnigt.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
   position: relative;
   transition: 500ms;
-  opacity: 0; /* change to '0' 
-  once the whole app is finished */
+  opacity: 0;
 }
 
 /*Add background overlay*/
@@ -303,6 +302,8 @@ h3 {
 @media screen and (max-width: 800px) {
   .side-panel-1,
   .side-panel-2,
+  .side-panel-3,
+  .side-panel-4,
   .container {
     position: relative;
     width: 100%;
