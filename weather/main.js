@@ -13,8 +13,30 @@ const form = document.getElementById("location-input");
 const search = document.querySelector(".search");
 const btn = document.querySelector(".submit");
 const cities = document.querySelectorAll(".city");
-const hourly = document.querySelector(".hour");
-const hourlyWeatherContainer = document.querySelector(".side-panel-3");
+const hour1 = document.querySelector(".temp1");
+const hour2 = document.querySelector(".temp2");
+const hour3 = document.querySelector(".temp3");
+const hour4 = document.querySelector(".temp4");
+const hour5 = document.querySelector(".temp5");
+const hour6 = document.querySelector(".temp6");
+const hour7 = document.querySelector(".temp7");
+const hour8 = document.querySelector(".temp8");
+const hour9 = document.querySelector(".temp9");
+const hour10 = document.querySelector(".temp10");
+const hour11 = document.querySelector(".temp11");
+const hour12 = document.querySelector(".temp12");
+const hour13 = document.querySelector(".temp13");
+const hour14 = document.querySelector(".temp14");
+const hour15 = document.querySelector(".temp15");
+const hour16 = document.querySelector(".temp16");
+const hour17 = document.querySelector(".temp17");
+const hour18 = document.querySelector(".temp18");
+const hour19 = document.querySelector(".temp19");
+const hour20 = document.querySelector(".temp20");
+const hour21 = document.querySelector(".temp21");
+const hour22 = document.querySelector(".temp22");
+const hour23 = document.querySelector(".temp23");
+const hour24 = document.querySelector(".temp24");
 
 //Första staden som laddas in
 let cityInput = "Södertälje";
@@ -77,21 +99,62 @@ function fetchWeatherData() {
       conditionOutput.innerHTML = data.current.condition.text;
 
       //Timmar
+
       const hourForecasts = data.forecast.forecastday[0].hour;
 
       const forecastDataList = hourForecasts.map((f) => {
         return f.temp_c;
       });
 
+      //varje timme
+      hour1.innerHTML = data.forecast.forecastday[0].hour[0].temp_c + "&#176;";
+      hour2.innerHTML = data.forecast.forecastday[0].hour[1].temp_c + "&#176;";
+      hour3.innerHTML = data.forecast.forecastday[0].hour[2].temp_c + "&#176;";
+      hour4.innerHTML = data.forecast.forecastday[0].hour[3].temp_c + "&#176;";
+      hour5.innerHTML = data.forecast.forecastday[0].hour[4].temp_c + "&#176;";
+      hour6.innerHTML = data.forecast.forecastday[0].hour[5].temp_c + "&#176;";
+      hour7.innerHTML = data.forecast.forecastday[0].hour[6].temp_c + "&#176;";
+      hour8.innerHTML = data.forecast.forecastday[0].hour[7].temp_c + "&#176;";
+      hour9.innerHTML = data.forecast.forecastday[0].hour[8].temp_c + "&#176;";
+      hour10.innerHTML = data.forecast.forecastday[0].hour[9].temp_c + "&#176;";
+      hour11.innerHTML =
+        data.forecast.forecastday[0].hour[10].temp_c + "&#176;";
+      hour12.innerHTML =
+        data.forecast.forecastday[0].hour[11].temp_c + "&#176;";
+      hour13.innerHTML =
+        data.forecast.forecastday[0].hour[12].temp_c + "&#176;";
+      hour14.innerHTML =
+        data.forecast.forecastday[0].hour[13].temp_c + "&#176;";
+      hour15.innerHTML =
+        data.forecast.forecastday[0].hour[14].temp_c + "&#176;";
+      hour16.innerHTML =
+        data.forecast.forecastday[0].hour[15].temp_c + "&#176;";
+      hour17.innerHTML =
+        data.forecast.forecastday[0].hour[16].temp_c + "&#176;";
+      hour18.innerHTML =
+        data.forecast.forecastday[0].hour[17].temp_c + "&#176;";
+      hour19.innerHTML =
+        data.forecast.forecastday[0].hour[18].temp_c + "&#176;";
+      hour20.innerHTML =
+        data.forecast.forecastday[0].hour[19].temp_c + "&#176;";
+      hour21.innerHTML =
+        data.forecast.forecastday[0].hour[20].temp_c + "&#176;";
+      hour22.innerHTML =
+        data.forecast.forecastday[0].hour[21].temp_c + "&#176;";
+      hour23.innerHTML =
+        data.forecast.forecastday[0].hour[22].temp_c + "&#176;";
+      hour24.innerHTML =
+        data.forecast.forecastday[0].hour[23].temp_c + "&#176;";
+
       // hourly.innerHTML = forecastDataList;
 
-      console.log(forecastDataList);
+      // console.log(forecastDataList);
 
-      hourForecasts.forEach((hourlyData) => {
-        const listItemDOM = hourlyWeatherContainer
-          .generateListItemDOM(hourlyData)
-          .appendChild(listItemDOM);
-      });
+      // hourForecasts.forEach((hourlyData) => {
+      //   const listItemDOM = hourlyWeatherContainer
+      //     .generateListItemDOM(hourlyData)
+      //     .appendChild(listItemDOM);
+      // });
 
       //Timmar
       //hourly.innerHTML = data.forecast.forecastday[0].hour[0].temp_c;
