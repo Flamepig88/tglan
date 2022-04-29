@@ -38,7 +38,7 @@ h3 {
 
 .weather-container {
   min-height: 100vh;
-  background-image: url(./images/day/molnigt.jpg);
+  background-image: url(./bakgrunder/dag/molnigt.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -236,6 +236,7 @@ h3 {
 }
 
 .side-panel-3 ul {
+  display: grid;
   padding: 0 0 0 0;
   margin: -0.5em 0;
 }

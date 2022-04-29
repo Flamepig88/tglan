@@ -14,6 +14,7 @@ const search = document.querySelector(".search");
 const btn = document.querySelector(".submit");
 const cities = document.querySelectorAll(".city");
 const hourly = document.querySelector(".hour");
+const hourlyWeatherContainer = document.querySelector(".side-panel-3");
 
 //Första staden som laddas in
 let cityInput = "Södertälje";
@@ -75,29 +76,32 @@ function fetchWeatherData() {
       temp.innerHTML = data.current.temp_c + "&#176;";
       conditionOutput.innerHTML = data.current.condition.text;
 
+      //Timmar
       const hourForecasts = data.forecast.forecastday[0].hour;
 
       const forecastDataList = hourForecasts.map((f) => {
         return f.temp_c;
       });
 
+      // hourly.innerHTML = forecastDataList;
+
       console.log(forecastDataList);
 
-      // hourForecasts.forEach((hourlyData) => {});
+      hourForecasts.forEach((hourlyData) => {
+        const listItemDOM = hourlyWeatherContainer
+          .generateListItemDOM(hourlyData)
+          .appendChild(listItemDOM);
+      });
 
       //Timmar
-      hourly.innerHTML = data.forecast.forecastday[0].hour[0].temp_c;
+      //hourly.innerHTML = data.forecast.forecastday[0].hour[0].temp_c;
 
-      /* Get the date and time from the city and extract 
-    the day, month, year and time into individual variables*/
       const date = data.location.localtime;
       const y = parseInt(date.substr(0, 4));
       const m = parseInt(date.substr(8, 2));
       const d = parseInt(date.substr(5, 2));
       const time = date.substr(11);
 
-      /*Reformat the date into somehing more 
-    appealing and add it to the page*/
       /*Original format: 2021-10-09 17:53*/
       /*New Format: 17:53 - Friday 9, 10 2021*/
       dateOutput.innerHTML = `${dayOfTheWeek(d, m, y)} ${m}/${d} - ${y}`;
@@ -132,7 +136,7 @@ function fetchWeatherData() {
 
       if (code == 1000) {
         //Ändrar bakgrundsbilden till klart väder ifall det är klart ute
-        app.style.backgroundImage = `url(./images/${timeOfDay}/klart.jpg)`;
+        app.style.backgroundImage = `url(./bakgrunder/${timeOfDay}/klart.jpg)`;
 
         //Ändra sök-knappens färg beroende på tid
         btn.style.background = "#e5ba92";
@@ -154,7 +158,7 @@ function fetchWeatherData() {
         code == 1279 ||
         code == 1282
       ) {
-        app.style.backgroundImage = `url(./images/${timeOfDay}/molnigt.jpg)`;
+        app.style.backgroundImage = `url(./bakgrunder/${timeOfDay}/molnigt.jpg)`;
         btn.style.background = "#fa6d1b";
         if (timeOfDay == "night") {
           btn.style.background = "#181e27";
@@ -180,14 +184,14 @@ function fetchWeatherData() {
         code == 1249 ||
         code == 1252
       ) {
-        app.style.backgroundImage = `url(./images/${timeOfDay}/regnigt.jpg)`;
+        app.style.backgroundImage = `url(./bakgrunder/${timeOfDay}/regnigt.jpg)`;
         btn.style.background = "#647d75";
         if (timeOfDay == "night") {
           btn.style.background = "#325c80";
         }
         //Snöigt väder
       } else {
-        app.style.backgroundImage = `url(./images/${timeOfDay}/snöigt.jpg)`;
+        app.style.backgroundImage = `url(./bakgrunder/${timeOfDay}/snöigt.jpg)`;
         btn.style.background = "#4d72aa";
         if (timeOfDay == "night") {
           btn.style.background = "#1b1b1b";
