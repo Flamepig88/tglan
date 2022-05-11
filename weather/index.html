@@ -4,35 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script
-      src="https://kit.fontawesome.com/ccbd4d6bc1.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
+    <script src="script.js" defer></script>
     <link
       rel="shortcut icon"
       href="//cdn.weatherapi.com/weather/64x64/day/296.png"
       type="image/x-icon"
     />
-    <title>Väder</title>
+    <title>Väder App</title>
   </head>
   <body>
     <div class="weather-container">
       <div class="container">
         <div>
-          <h1 class="temp">10&#176;</h1>
           <div class="city-time">
             <h1 class="name">Södertälje</h1>
             <small>
               <span class="time">09:41</span>
-              - <span class="date">Måndag, 1 Januari</span>
+              <span class="date">Måndag, 1 Januari</span>
             </small>
           </div>
           <div class="weather">
@@ -45,6 +38,7 @@
             />
             <span class="condition">Soligt</span>
           </div>
+          <h1 class="temp">10&#176;</h1>
         </div>
       </div>
       <div class="side-panel-1">
@@ -70,8 +64,8 @@
         <ul class="details">
           <h4>Detaljer</h4>
           <li>
-            <span>Moln</span>
-            <span class="cloud">89%</span>
+            <span>Lufttryck</span>
+            <span class="pressure">89%</span>
           </li>
           <li>
             <span>Luftfuktighet</span>
@@ -230,32 +224,6 @@
               <div class="temp24" id="hourly-temp">1&#176;</div>
             </li>
           </div>
-        </ul>
-      </div>
-      <div class="side-panel-4">
-        <ul class="week">
-          <h4>Dygnprognos</h4>
-          <li>
-            <span>Måndag</span>
-          </li>
-          <li>
-            <span>Tisdag</span>
-          </li>
-          <li>
-            <span>Onsdag</span>
-          </li>
-          <li>
-            <span>Torsdag</span>
-          </li>
-          <li>
-            <span>Fredag</span>
-          </li>
-          <li>
-            <span>Lördag</span>
-          </li>
-          <li>
-            <span>Söndag</span>
-          </li>
         </ul>
       </div>
     </div>

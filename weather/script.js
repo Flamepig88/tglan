@@ -6,7 +6,7 @@ const timeOutput = document.querySelector(".time");
 const conditionOutput = document.querySelector(".condition");
 const nameOutput = document.querySelector(".name");
 const icon = document.querySelector(".icon");
-const cloudOutput = document.querySelector(".cloud");
+const pressureOutput = document.querySelector(".pressure");
 const humidityOutput = document.querySelector(".humidity");
 const windOutput = document.querySelector(".wind");
 const form = document.getElementById("location-input");
@@ -57,7 +57,7 @@ cities.forEach((city) => {
 form.addEventListener("submit", (e) => {
   //Varning ifall input-fältet är tomt
   if (search.value.length == 0) {
-    alert("Skriv in en giltlig stad");
+    alert("Ange en giltlig stad");
   } else {
     //Byt till staden du har skrivit in
     cityInput = search.value;
@@ -71,7 +71,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
-//Function som returnerar veckodagen istället för bara ett datum
+//Funktion som returnerar veckodagen istället för bara ett datum
 function dayOfTheWeek(day, month, year) {
   const weekday = [
     "Söndag",
@@ -95,7 +95,7 @@ function fetchWeatherData() {
       console.log(data);
 
       //Lägg till temperatur och väder
-      temp.innerHTML = data.current.temp_c + "&#176;";
+      temp.innerHTML = Math.round(data.current.temp_c) + "&#176;";
       conditionOutput.innerHTML = data.current.condition.text;
 
       //Timmar
@@ -107,44 +107,54 @@ function fetchWeatherData() {
       });
 
       //varje timme
-      hour1.innerHTML = data.forecast.forecastday[0].hour[0].temp_c + "&#176;";
-      hour2.innerHTML = data.forecast.forecastday[0].hour[1].temp_c + "&#176;";
-      hour3.innerHTML = data.forecast.forecastday[0].hour[2].temp_c + "&#176;";
-      hour4.innerHTML = data.forecast.forecastday[0].hour[3].temp_c + "&#176;";
-      hour5.innerHTML = data.forecast.forecastday[0].hour[4].temp_c + "&#176;";
-      hour6.innerHTML = data.forecast.forecastday[0].hour[5].temp_c + "&#176;";
-      hour7.innerHTML = data.forecast.forecastday[0].hour[6].temp_c + "&#176;";
-      hour8.innerHTML = data.forecast.forecastday[0].hour[7].temp_c + "&#176;";
-      hour9.innerHTML = data.forecast.forecastday[0].hour[8].temp_c + "&#176;";
-      hour10.innerHTML = data.forecast.forecastday[0].hour[9].temp_c + "&#176;";
+      hour1.innerHTML =
+        Math.round(data.forecast.forecastday[0].hour[0].temp_c) + "&#176;";
+      hour2.innerHTML =
+        Math.round(data.forecast.forecastday[0].hour[1].temp_c) + "&#176;";
+      hour3.innerHTML =
+        Math.round(data.forecast.forecastday[0].hour[2].temp_c) + "&#176;";
+      hour4.innerHTML =
+        Math.round(data.forecast.forecastday[0].hour[3].temp_c) + "&#176;";
+      hour5.innerHTML =
+        Math.round(data.forecast.forecastday[0].hour[4].temp_c) + "&#176;";
+      hour6.innerHTML =
+        Math.round(data.forecast.forecastday[0].hour[5].temp_c) + "&#176;";
+      hour7.innerHTML =
+        Math.round(data.forecast.forecastday[0].hour[6].temp_c) + "&#176;";
+      hour8.innerHTML =
+        Math.round(data.forecast.forecastday[0].hour[7].temp_c) + "&#176;";
+      hour9.innerHTML =
+        Math.round(data.forecast.forecastday[0].hour[8].temp_c) + "&#176;";
+      hour10.innerHTML =
+        Math.round(data.forecast.forecastday[0].hour[9].temp_c) + "&#176;";
       hour11.innerHTML =
-        data.forecast.forecastday[0].hour[10].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[10].temp_c) + "&#176;";
       hour12.innerHTML =
-        data.forecast.forecastday[0].hour[11].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[11].temp_c) + "&#176;";
       hour13.innerHTML =
-        data.forecast.forecastday[0].hour[12].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[12].temp_c) + "&#176;";
       hour14.innerHTML =
-        data.forecast.forecastday[0].hour[13].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[13].temp_c) + "&#176;";
       hour15.innerHTML =
-        data.forecast.forecastday[0].hour[14].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[14].temp_c) + "&#176;";
       hour16.innerHTML =
-        data.forecast.forecastday[0].hour[15].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[15].temp_c) + "&#176;";
       hour17.innerHTML =
-        data.forecast.forecastday[0].hour[16].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[16].temp_c) + "&#176;";
       hour18.innerHTML =
-        data.forecast.forecastday[0].hour[17].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[17].temp_c) + "&#176;";
       hour19.innerHTML =
-        data.forecast.forecastday[0].hour[18].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[18].temp_c) + "&#176;";
       hour20.innerHTML =
-        data.forecast.forecastday[0].hour[19].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[19].temp_c) + "&#176;";
       hour21.innerHTML =
-        data.forecast.forecastday[0].hour[20].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[20].temp_c) + "&#176;";
       hour22.innerHTML =
-        data.forecast.forecastday[0].hour[21].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[21].temp_c) + "&#176;";
       hour23.innerHTML =
-        data.forecast.forecastday[0].hour[22].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[22].temp_c) + "&#176;";
       hour24.innerHTML =
-        data.forecast.forecastday[0].hour[23].temp_c + "&#176;";
+        Math.round(data.forecast.forecastday[0].hour[23].temp_c) + "&#176;";
 
       // hourly.innerHTML = forecastDataList;
 
@@ -173,19 +183,18 @@ function fetchWeatherData() {
       //Lägg till stadens namn
       nameOutput.innerHTML = data.location.name;
 
-      /*Get the corresponding icon url for 
-    the weather and extract a part of it*/
+      //Hämta url till ikonen och völj ut en del av den
       const iconId = data.current.condition.icon.substr(
         "//cdn.weatherapi.com/weather/64x64/".length
       );
-      /*Reformat the icon url to your own 
-    local folder path and add it to the page*/
+
+      //Hänvisa till din egen mapp. || .length ändras till ./mappens namn + iconId (bildens namn)/
       icon.src = "./icons/" + iconId;
 
       //Lägg til väderdetaljerna
-      cloudOutput.innerHTML = data.current.cloud + "%";
+      pressureOutput.innerHTML = data.current.pressure_mb + " hPa";
       humidityOutput.innerHTML = data.current.humidity + "%";
-      windOutput.innerHTML = data.current.wind_kph + "km/h";
+      windOutput.innerHTML = data.current.wind_kph + " km/h";
 
       //Standard tid på dagen
       let timeOfDay = "dag";
