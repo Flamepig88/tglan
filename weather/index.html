@@ -24,7 +24,7 @@
           <div class="city-time">
             <h1 class="name">Södertälje</h1>
             <small>
-              <span class="time">09:41</span>
+              <span class="time">10:00</span>
               <span class="date">Måndag, 1 Januari</span>
             </small>
           </div>
@@ -45,7 +45,7 @@
         <form id="location-input">
           <input type="text" class="search" placeholder="Sök efter stad..." />
           <button type="submit" class="submit">
-            <i class="fas fa-search"></i>
+            <img class="search-img" src="icons/search.png" alt="" />
           </button>
         </form>
 
@@ -78,9 +78,50 @@
         </ul>
       </div>
       <div class="side-panel-3">
-        <ul class="all-day">
-          <h4>Timprognos</h4>
-          <div class="hourly-item">
+        <h4>Timprognos</h4>
+
+        <ul>
+          <div class="hourly-weather">
+            <li>
+              <strong id="now">Nu</strong>
+            </li>
+            <img id="icon-hour-now" src="" alt="" />
+            <strong class="now" id="hour-now"></strong>
+          </div>
+
+          <div class="hourly-weather">
+            <li>
+              <strong id="time1"></strong>
+            </li>
+            <img id="icon-hour-1" src="" alt="" />
+            <strong class="hour1" id="hour-1"></strong>
+          </div>
+
+          <div class="hourly-weather">
+            <li>
+              <strong id="time2"></strong>
+            </li>
+            <img id="icon-hour-2" src="" alt="" />
+            <strong class="hour2" id="hour-2"></strong>
+          </div>
+
+          <div class="hourly-weather">
+            <li>
+              <strong id="time3"></strong>
+            </li>
+            <img id="icon-hour-3" src="" alt="" />
+            <strong class="hour3" id="hour-3"></strong>
+          </div>
+
+          <div class="hourly-weather">
+            <li>
+              <strong id="time4"></strong>
+            </li>
+            <img id="icon-hour-4" src="" alt="" />
+            <strong class="hour4" id="hour-4"></strong>
+          </div>
+        </ul>
+        <!-- <div class="hourly-item">
             <li>
               <div class="hour">00:00</div>
               <div class="temp1" id="hourly-temp">1&#176;</div>
@@ -223,8 +264,7 @@
               <div class="hour">23:00</div>
               <div class="temp24" id="hourly-temp">1&#176;</div>
             </li>
-          </div>
-        </ul>
+          </div> -->
       </div>
     </div>
   </body>
