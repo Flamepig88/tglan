@@ -58,20 +58,25 @@ function weekDays(day, month, year) {
     "Fredag",
     "Lördag",
   ];
-  return weekday[new Date(`${day}/${month}/${year}`).getDay()];
+  return weekday[new Date(`${month}/${day}/${year}`).getDay()];
 }
 
-function fetchWeatherDatas() {
+// Funktion som hämtar all data från API
+function fetchWeatherData() {
   fetch(
-    `https://api.openweathermap.org/data/2.5/onecall?appid=dbb76c5d98d5dbafcb94441c6a10236e&lat=52.229676&lon=21.012229`
+    `https://api.weatherapi.com/v1/forecast.json?key=f74998a310f641339ec123218220104&q=${cityInput}&days=7&aqi=no&alerts=no&lang=sv`
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.hourly);
+      console.log(data);
+
+      //Lägg till temperatur och väder
+      temp.innerHTML = Math.round(data.current.temp_c) + "&#176;" + "C";
+      conditionOutput.innerHTML = data.current.condition.text;
 
       //Timmar
-      const hourNow = Math.round(data.hourly[0].temp);
-      const hour1 = Math.round(data.hourly[0].temp);
+      const hourNow = Math.round(data.current.temp_c);
+      const hour1 = Math.round(data.forecast.forecastday[0].hour[15].temp_c);
       const hour2 = Math.round(data.forecast.forecastday[0].hour[16].temp_c);
       const hour3 = Math.round(data.forecast.forecastday[0].hour[17].temp_c);
       const hour4 = Math.round(data.forecast.forecastday[0].hour[18].temp_c);
@@ -93,46 +98,6 @@ function fetchWeatherDatas() {
       document.getElementById("time2").innerHTML = time2;
       document.getElementById("time3").innerHTML = time3;
       document.getElementById("time4").innerHTML = time4;
-    });
-}
-
-// Funktion som hämtar all data från API
-function fetchWeatherData() {
-  fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=f74998a310f641339ec123218220104&q=${cityInput}&days=7&aqi=no&alerts=no&lang=sv`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-
-      //Lägg till temperatur och väder
-      temp.innerHTML = Math.round(data.current.temp_c) + "&#176;";
-      conditionOutput.innerHTML = data.current.condition.text;
-
-      // //Timmar
-      // const hourNow = Math.round(data.current.temp_c);
-      // const hour1 = Math.round(data.forecast.forecastday[0].hour[15].temp_c);
-      // const hour2 = Math.round(data.forecast.forecastday[0].hour[16].temp_c);
-      // const hour3 = Math.round(data.forecast.forecastday[0].hour[17].temp_c);
-      // const hour4 = Math.round(data.forecast.forecastday[0].hour[18].temp_c);
-
-      // document.getElementById("hour-now").innerHTML = hourNow + "&#176;";
-      // document.getElementById("hour-1").innerHTML = hour1 + "&#176;";
-      // document.getElementById("hour-2").innerHTML = hour2 + "&#176;";
-      // document.getElementById("hour-3").innerHTML = hour3 + "&#176;";
-      // document.getElementById("hour-4").innerHTML = hour4 + "&#176;";
-
-      // //Tid
-      // const timeNow = new Date().getHours();
-      // const time1 = timeNow + 1;
-      // const time2 = time1 + 1;
-      // const time3 = time2 + 1;
-      // const time4 = time3 + 1;
-
-      // document.getElementById("time1").innerHTML = time1;
-      // document.getElementById("time2").innerHTML = time2;
-      // document.getElementById("time3").innerHTML = time3;
-      // document.getElementById("time4").innerHTML = time4;
 
       // const hourForecasts = data.forecast.forecastday[0].hour;
 

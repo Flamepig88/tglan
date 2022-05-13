@@ -78,16 +78,10 @@ h3 {
   align-items: center;
 }
 
-.city-time,
-.temp,
-.weather {
-  margin: 0 1em;
-}
-
 .city-time h1 {
   margin: 0;
   margin-bottom: 0.2em;
-  font-size: 3em;
+  font-size: 4em;
 }
 
 .temp {
@@ -200,7 +194,7 @@ h3 {
 }
 
 .submit:hover {
-  background: rgb(189, 89, 53) !important;
+  background: rgb(104, 190, 201) !important;
   color: #000;
 }
 
