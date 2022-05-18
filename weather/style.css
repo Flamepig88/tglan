@@ -89,10 +89,6 @@ h3 {
   margin: 0;
 }
 
-#hourly-temp {
-  font-size: 1.8em;
-}
-
 .city-time img {
   display: block;
   margin: 0.5em 0;
@@ -101,7 +97,12 @@ h3 {
 }
 
 .city-time .condition {
-  margin-left: 155px;
+  margin-left: 195px;
+  margin-top: -89px;
+}
+
+.city-time .name {
+  margin-top: -10px;
 }
 
 .side-panel-1 {
@@ -115,7 +116,6 @@ h3 {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(7px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  z-index: 1;
   padding: 3em 2em;
   overflow-y: auto;
 }
@@ -154,42 +154,10 @@ h3 {
 .side-panel-2 {
   position: absolute;
   width: 28%;
-  height: 26%;
+  height: 50%;
   top: 20%;
-  right: 36%;
-  border-radius: 5px;
-  background: rgba(46, 38, 38, 0.322);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(7px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  z-index: 1;
-  padding: 0em 2em;
-  overflow-y: auto;
-}
-
-.side-panel-3 {
-  position: absolute;
-  width: 28%;
-  height: 27%;
-  top: 47%;
-  right: 36%;
-  border-radius: 5px;
-  background: rgba(46, 38, 38, 0.322);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(7px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  z-index: 1;
-  padding: 0em 2em;
-  overflow-y: auto;
-}
-
-.side-panel-4 {
-  position: absolute;
-  width: 100%;
-  height: 23%;
-  top: 77%;
-  right: 0%;
-  border-radius: 5px;
+  right: 37%;
+  border-radius: 30px;
   background: rgba(46, 38, 38, 0.322);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(7px);
@@ -250,22 +218,6 @@ h3 {
   margin: 2.5em 0;
 }
 
-.side-panel-3 ul {
-  display: flex;
-  padding: 0 0 0 0;
-  margin: -0.5em 0;
-}
-
-.side-panel-3 ul li {
-  display: flex;
-  color: #ccc;
-  margin: 1em 3px;
-}
-
-.side-panel-3 ul h4 {
-  margin: 2em 0;
-}
-
 .city {
   display: block;
   cursor: pointer;
@@ -305,8 +257,6 @@ h3 {
 @media screen and (max-width: 800px) {
   .side-panel-1,
   .side-panel-2,
-  .side-panel-3,
-  .side-panel-4,
   .container {
     position: relative;
     width: 100%;
