@@ -21,12 +21,14 @@ h3 {
 
 /* Track */
 ::-webkit-scrollbar-track {
+  display: none;
   background: rgba(110, 110, 110, 0.25);
   backdrop-filter: blur (7px);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+  display: none;
   background: rgb(70, 63, 63);
 }
 
@@ -97,12 +99,9 @@ h3 {
 }
 
 .city-time .condition {
-  margin-left: 195px;
-  margin-top: -89px;
-}
-
-.city-time .name {
-  margin-top: -10px;
+  margin-left: 185px;
+  margin-top: -80px;
+  font-size: 50px;
 }
 
 .side-panel-1 {
@@ -154,9 +153,9 @@ h3 {
 .side-panel-2 {
   position: absolute;
   width: 28%;
-  height: 50%;
+  height: 42%;
   top: 20%;
-  right: 37%;
+  right: 36%;
   border-radius: 30px;
   background: rgba(46, 38, 38, 0.322);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
@@ -246,27 +245,34 @@ h3 {
 }
 
 @media screen and (max-width: 1000px) {
-  html {
-    font-size: 14px;
-  }
-  .temp {
-    font-size: 4em;
-  }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .side-panel-1,
-  .side-panel-2,
   .container {
     position: relative;
     width: 100%;
     top: initial;
+  }
+  .city-time .condition {
+    margin-left: 185px;
+    margin-top: -80px;
+  }
+  .side-panel-2 {
+    width: 73%;
+    position: relative;
+    top: -369px;
+    right: -200px;
+    border-radius: 3px;
   }
 }
 
 @media screen and (max-width: 500px) {
   html {
     font-size: 12px;
+  }
+  .city-time .condition {
+    font-size: 40px;
   }
 }
 
