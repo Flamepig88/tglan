@@ -18,30 +18,24 @@ const uvOutput = document.querySelector(".uv");
 const precipOutput = document.querySelector(".precip");
 const feelslikeOutput = document.querySelector(".feelslike");
 
-//Första staden som laddas in
+//Standard Staden
 cityInput = "Södertälje";
 
 //Lägger till event för varje stad i listan
 cities.forEach((city) => {
   city.addEventListener("click", (e) => {
-    //Ändra staden till den du väljer
     cityInput = e.target.innerHTML;
-    //Hämtar all data från API
     fetchWeatherData();
   });
 });
 
-//Submit event till formuläret
+//Submit-event till formuläret
 form.addEventListener("submit", (e) => {
-  //Varning ifall input-fältet är tomt
   if (search.value.length == 0) {
     alert("Vänligen ange en stad i sökrutan");
   } else {
-    //Byt till staden du har skrivit in
     cityInput = search.value;
-    //Hämtar all data från API
     fetchWeatherData();
-    //Ta bort all text från input-fältet
     search.value = "";
   }
   e.preventDefault();
@@ -70,19 +64,9 @@ function fetchWeatherData() {
     .then((data) => {
       console.log(data);
 
-      //Lägg till temperatur och väder
+      //Lägg till temperatur och vädertillfälle
       temp.innerHTML = Math.round(data.current.temp_c) + "&#176;" + "C | ";
       conditionOutput.innerHTML = data.current.condition.text;
-
-      //Formaterar om datumet utifrån detta (2021-10-09 17:53) till: tid, dag, datum/månad - år
-      const date = data.location.localtime;
-      const y = parseInt(date.substr(0, 4));
-      const m = parseInt(date.substr(5, 2));
-      const d = parseInt(date.substr(8, 2));
-      const time = date.substr(11);
-
-      dateOutput.innerHTML = `${weekDays(d, m, y)} ${d}/${m} - ${y}`;
-      timeOutput.innerHTML = time + " |";
 
       //Lägg till stadens namn
       nameOutput.innerHTML = data.location.name;
@@ -98,23 +82,29 @@ function fetchWeatherData() {
       feelslikeOutput.innerHTML =
         Math.round(data.current.feelslike_c) + "&#176;C";
 
+      //Formaterar om datumet utifrån detta (2021-10-09 17:53) till: tid, dag, datum/månad - år
+      const date = data.location.localtime;
+      const y = parseInt(date.substr(0, 4));
+      const m = parseInt(date.substr(5, 2));
+      const d = parseInt(date.substr(8, 2));
+      const time = date.substr(11);
+
+      dateOutput.innerHTML = `${weekDays(d, m, y)} ${d}/${m} - ${y}`;
+      timeOutput.innerHTML = time + " Lokal tid " + " |";
+
       //Standard tid på dagen
       let timeOfDay = "dag";
+
+      //Ändra till natt ifall det är natt i staden du söker på
+      if (data.current.is_day == 0) {
+        timeOfDay = "natt";
+      }
 
       //Hämta id för varje vädertillfäle
       const code = data.current.condition.code;
 
-      //Ändra till natt ifall det är natt i staden du söker på
-      if (!data.current.is_day) {
-        timeOfDay = "natt";
-      }
-
       if (code == 1000) {
-        //Ändrar bakgrundsbilden till klart väder ifall det är klart ute
         app.style.backgroundImage = `url(./bakgrunder/${timeOfDay}/klart.jpg)`;
-
-        if (timeOfDay == "night") {
-        }
       } else if (
         //Molnigt väder
         code == 1003 ||
@@ -130,8 +120,6 @@ function fetchWeatherData() {
         code == 1282
       ) {
         app.style.backgroundImage = `url(./bakgrunder/${timeOfDay}/molnigt.jpg)`;
-        if (timeOfDay == "night") {
-        }
         //Regnigt väder
       } else if (
         code == 1063 ||
@@ -154,13 +142,9 @@ function fetchWeatherData() {
         code == 1252
       ) {
         app.style.backgroundImage = `url(./bakgrunder/${timeOfDay}/regnigt.jpg)`;
-        if (timeOfDay == "night") {
-        }
         //Snöigt väder
       } else {
         app.style.backgroundImage = `url(./bakgrunder/${timeOfDay}/snöigt.jpg)`;
-        if (timeOfDay == "night") {
-        }
       }
     })
 
@@ -169,8 +153,6 @@ function fetchWeatherData() {
       alert("Staden hittades inte, försök igen");
     });
 }
-
-//Hämtar all data från API när sidan laddas in
 fetchWeatherData();
 
 app.style.opacity = "1";

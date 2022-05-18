@@ -10,7 +10,7 @@ body {
 
 h1,
 h3 {
-  font-weight: 400;
+  font-weight: 100;
 }
 
 /* Scroll hjul -------------------------/*
@@ -91,13 +91,6 @@ h3 {
   margin: 0;
 }
 
-.city-time img {
-  display: block;
-  margin: 0.5em 0;
-  margin-top: -100px;
-  margin-left: 150px;
-}
-
 .city-time .condition {
   margin-left: 185px;
   margin-top: -80px;
@@ -136,11 +129,6 @@ h3 {
   cursor: pointer;
   font-size: 1.65em;
   transition: 0.4s;
-}
-
-.icon {
-  height: 50px;
-  width: 50px;
 }
 
 .search-img {
@@ -232,16 +220,9 @@ h3 {
   align-items: center;
 }
 
-.all-day li {
-  display: inline-block;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.week li {
-  display: inline-block;
-  justify-content: space-between;
-  align-items: center;
+.detail-banner {
+  border-bottom: 1px #ccc solid;
+  padding-bottom: 15px;
 }
 
 @media screen and (max-width: 1000px) {
