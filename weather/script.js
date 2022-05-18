@@ -75,29 +75,29 @@ function fetchWeatherData() {
       conditionOutput.innerHTML = data.current.condition.text;
 
       //Timmar
-      const hourNow = Math.round(data.current.temp_c);
-      const hour1 = Math.round(data.forecast.forecastday[0].hour[15].temp_c);
-      const hour2 = Math.round(data.forecast.forecastday[0].hour[16].temp_c);
-      const hour3 = Math.round(data.forecast.forecastday[0].hour[17].temp_c);
-      const hour4 = Math.round(data.forecast.forecastday[0].hour[18].temp_c);
+      // const hourNow = Math.round(data.current.temp_c);
+      // const hour1 = Math.round(data.forecast.forecastday[0].hour[15].temp_c);
+      // const hour2 = Math.round(data.forecast.forecastday[0].hour[16].temp_c);
+      // const hour3 = Math.round(data.forecast.forecastday[0].hour[17].temp_c);
+      // const hour4 = Math.round(data.forecast.forecastday[0].hour[18].temp_c);
 
-      document.getElementById("hour-now").innerHTML = hourNow + "&#176;";
-      document.getElementById("hour-1").innerHTML = hour1 + "&#176;";
-      document.getElementById("hour-2").innerHTML = hour2 + "&#176;";
-      document.getElementById("hour-3").innerHTML = hour3 + "&#176;";
-      document.getElementById("hour-4").innerHTML = hour4 + "&#176;";
+      // document.getElementById("hour-now").innerHTML = hourNow + "&#176;";
+      // document.getElementById("hour-1").innerHTML = hour1 + "&#176;";
+      // document.getElementById("hour-2").innerHTML = hour2 + "&#176;";
+      // document.getElementById("hour-3").innerHTML = hour3 + "&#176;";
+      // document.getElementById("hour-4").innerHTML = hour4 + "&#176;";
 
       //Tid
-      const timeNow = new Date().getHours();
-      const time1 = timeNow + 1;
-      const time2 = time1 + 1;
-      const time3 = time2 + 1;
-      const time4 = time3 + 1;
+      // const timeNow = new Date().getHours();
+      // const time1 = timeNow + 1;
+      // const time2 = time1 + 1;
+      // const time3 = time2 + 1;
+      // const time4 = time3 + 1;
 
-      document.getElementById("time1").innerHTML = time1;
-      document.getElementById("time2").innerHTML = time2;
-      document.getElementById("time3").innerHTML = time3;
-      document.getElementById("time4").innerHTML = time4;
+      // document.getElementById("time1").innerHTML = time1;
+      // document.getElementById("time2").innerHTML = time2;
+      // document.getElementById("time3").innerHTML = time3;
+      // document.getElementById("time4").innerHTML = time4;
 
       // const hourForecasts = data.forecast.forecastday[0].hour;
 
