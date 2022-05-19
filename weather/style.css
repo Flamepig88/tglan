@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik";
   background: #111;
 }
 
@@ -46,7 +46,7 @@ h3 {
   background-size: cover;
   color: #fff;
   position: relative;
-  transition: 300ms;
+  transition: 600ms;
   opacity: 0;
 }
 
