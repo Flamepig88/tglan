@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Applikation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <h2 class="titel">Todo Applikation</h2>
+
+    <!-- Skapa ny todo -->
+    <section class="create-todo">
+      <form id="new-todo-form">
+        <h4>Skapa en Todo</h4>
+        <input
+          type="text"
+          placeholder="Skriv här..."
+          name="content"
+          id="content"
+        />
+
+        <input type="submit" value="Add todo" />
+      </form>
+    </section>
+    <!-- Skapa ny todo -->
+
+    <!-- Todos -->
+    <section class="todo-list">
+      <h3>Todos</h3>
+      <div class="list" id="todo-list"></div>
+    </section>
+    <!-- Todos -->
+  </body>
+</html>
