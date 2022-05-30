@@ -1,14 +1,15 @@
 //Localstorage
 todos = JSON.parse(localStorage.getItem("todos")) || [];
-const newTodoForm = document.querySelector("#new-todo-form");
+
+const todoForm = document.querySelector(".todo-form");
 
 //Todo formulär
-newTodoForm.addEventListener("submit", (e) => {
+todoForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const todo = {
     content: e.target.elements.content.value,
-    done: false,
+    klar: false,
   };
 
   todos.push(todo);
@@ -20,67 +21,67 @@ newTodoForm.addEventListener("submit", (e) => {
   e.target.reset();
 
   // Visa todos
-  DisplayTodos();
+  createTodo();
 });
 
-DisplayTodos();
+createTodo();
 
-function DisplayTodos() {
-  const todoList = document.querySelector("#todo-list");
-  todoList.innerHTML = "";
+function createTodo() {
+  const todoLista = document.querySelector("#todos");
+  todoLista.innerHTML = "";
 
   todos.forEach((todo) => {
     const todoItem = document.createElement("div");
     todoItem.classList.add("todo-item");
 
-    const label = document.createElement("label");
+    const etikett = document.createElement("label");
     const input = document.createElement("input");
     const span = document.createElement("span");
     const content = document.createElement("div");
-    const actions = document.createElement("div");
-    const edit = document.createElement("button");
-    const deleteButton = document.createElement("button");
+    const knappar = document.createElement("div");
+    const ändra = document.createElement("button");
+    const taBort = document.createElement("button");
 
     input.type = "checkbox";
-    input.checked = todo.done;
-    span.classList.add("bubble");
+    input.checked = todo.klar;
+    span.classList.add("markering");
     content.classList.add("todo-content");
-    actions.classList.add("actions");
-    edit.classList.add("edit");
-    deleteButton.classList.add("delete");
+    knappar.classList.add("knappar");
+    ändra.classList.add("ändra");
+    taBort.classList.add("tabort");
 
     content.innerHTML = `<input type="text" value="${todo.content}" readonly>`;
-    edit.innerHTML = "Ändra";
-    deleteButton.innerHTML = "Ta bort";
+    ändra.innerHTML = "Ändra";
+    taBort.innerHTML = "X";
 
-    label.appendChild(input);
-    label.appendChild(span);
-    actions.appendChild(edit);
-    actions.appendChild(deleteButton);
-    todoItem.appendChild(label);
+    etikett.appendChild(input);
+    etikett.appendChild(span);
+    knappar.appendChild(ändra);
+    knappar.appendChild(taBort);
+    todoItem.appendChild(etikett);
     todoItem.appendChild(content);
-    todoItem.appendChild(actions);
+    todoItem.appendChild(knappar);
 
-    todoList.appendChild(todoItem);
+    todoLista.appendChild(todoItem);
 
-    if (todo.done) {
-      todoItem.classList.add("done");
+    if (todo.klar) {
+      todoItem.classList.add("klar");
     }
 
     input.addEventListener("change", (e) => {
-      todo.done = e.target.checked;
+      todo.klar = e.target.checked;
       localStorage.setItem("todos", JSON.stringify(todos));
 
-      if (todo.done) {
-        todoItem.classList.add("done");
+      if (todo.klar) {
+        todoItem.classList.add("klar");
       } else {
-        todoItem.classList.remove("done");
+        todoItem.classList.remove("klar");
       }
 
-      DisplayTodos();
+      createTodo();
     });
 
-    edit.addEventListener("click", (e) => {
+    ändra.addEventListener("click", (e) => {
       const input = content.querySelector("input");
       input.removeAttribute("readonly");
       input.focus();
@@ -88,14 +89,14 @@ function DisplayTodos() {
         input.setAttribute("readonly", true);
         todo.content = e.target.value;
         localStorage.setItem("todos", JSON.stringify(todos));
-        DisplayTodos();
+        createTodo();
       });
     });
 
-    deleteButton.addEventListener("click", (e) => {
+    taBort.addEventListener("click", (e) => {
       todos = todos.filter((t) => t != todo);
       localStorage.setItem("todos", JSON.stringify(todos));
-      DisplayTodos();
+      createTodo();
     });
   });
 }
