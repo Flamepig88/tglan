@@ -11,26 +11,29 @@
   <body>
     <h2 class="titel">Todo Applikation</h2>
 
-    <!-- Skapa ny todo -->
+    <section class="beskrivning-väder">
+      <h2 class="beskrivning">Just nu är det -</h2>
+      <h2 class="beskrivning-2">Regnigt</h2>
+    </section>
+
+    <h2 class="datum">31 Maj - 2022</h2>
+
     <section class="skapa-todo">
       <form class="todo-form">
-        <h3>Skapa en Todo</h4>
         <input
+          class="todo-input"
           type="text"
-          placeholder="Skriv här..."
+          placeholder="Skriv din todo här..."
           name="content"
           id="content"
         />
 
-        <input type="submit" value="Lägg till" />
+        <input class="lägg-till-button" type="submit" value="Lägg till" />
       </form>
     </section>
-    <!-- Skapa ny todo -->
 
-    <!-- Todos -->
     <section class="todos">
       <div class="list" id="todos"></div>
     </section>
-    <!-- Todos -->
   </body>
 </html>

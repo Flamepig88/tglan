@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script src="date-and-time.js"></script>
+    <link
+      rel="shortcut icon"
+      href="//cdn.weatherapi.com/weather/64x64/day/296.png"
+      type="image/x-icon"
+    />
+    <title>Väder App</title>
+  </head>
+  <body>
+    <div class="weather-container">
+      <div class="container">
+        <div>
+          <div class="city-time">
+            <h1 class="temp">10&#176;</h1>
+            <h1 class="condition">Soligt</h1>
+            <h1 class="name">Södertälje</h1>
+            <small>
+              <span class="time">10:00</span>
+              <span class="date">Måndag, 1 Januari</span>
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="side-panel-1">
+        <form id="location-input">
+          <input
+            type="text"
+            class="search"
+            placeholder="Sök efter en stad..."
+          />
+          <button type="submit" class="submit">
+            <img class="search-img" src="icons/search.png" alt="" />
+          </button>
+        </form>
+        <ul class="cities">
+          <h4>Storstäder</h4>
+          <li class="city">New York</li>
+          <li class="city">Stockholm</li>
+          <li class="city">paris</li>
+          <li class="city">Tokyo</li>
+          <li class="city">Sydney</li>
+          <li class="city">London</li>
+          <li class="city">Rome</li>
+        </ul>
+      </div>
+      <div class="side-panel-2">
+        <ul class="details">
+          <h4 class="detail-banner">Detaljer</h4>
+          <li>
+            <span>Lufttryck</span>
+            <span class="pressure">89%</span>
+          </li>
+          <li>
+            <span>Luftfuktighet</span>
+            <span class="humidity">64%</span>
+          </li>
+          <li>
+            <span>Vind</span>
+            <span class="wind">8km/h</span>
+          </li>
+          <li>
+            <span>Moln</span>
+            <span class="cloud">50%</span>
+          </li>
+          <li>
+            <span>Synlighet</span>
+            <span class="visibility">10km</span>
+          </li>
+          <li>
+            <span>UV Index</span>
+            <span class="uv">1</span>
+          </li>
+          <li>
+            <span>Nederbörd</span>
+            <span class="precip">1 mm</span>
+          </li>
+          <li>
+            <span>Känns som</span>
+            <span class="feelslike">10&#176;</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

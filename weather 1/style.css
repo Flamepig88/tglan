@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  font-family: "Rubik";
+  background: #111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h3 {
+  font-weight: 100;
+}
+
+/* Scroll hjul -------------------------/*
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+  background: rgba(110, 110, 110, 0.25);
+  backdrop-filter: blur (7px);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  display: none;
+  background: rgb(70, 63, 63);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* Scroll hjul ------------------------*/
+
+.weather-container {
+  min-height: 100vh;
+  background-image: url(./bakgrunder/dag/molnigt.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  transition: 600ms;
+  opacity: 0;
+}
+
+.weather-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.404);
+  z-index: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2em 3em 4em 3em;
+}
+
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.city-time h1 {
+  margin: 0;
+  margin-bottom: 0.2em;
+  font-size: 4em;
+}
+
+.temp {
+  font-size: 7em;
+  margin: 0;
+}
+
+.city-time .condition {
+  margin-left: 185px;
+  margin-top: -80px;
+  font-size: 50px;
+}
+
+.side-panel-1 {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  background: rgba(46, 38, 38, 0.322);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 3em 2em;
+  overflow-y: auto;
+}
+
+.side-panel-1 form {
+  margin-bottom: 3em;
+}
+
+.submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  padding: 0.63em;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: rgb(113, 229, 245);
+  cursor: pointer;
+  font-size: 1.65em;
+  transition: 0.4s;
+}
+
+.search-img {
+  position: static;
+  height: auto;
+  width: 30px;
+  margin-top: 10px;
+}
+
+.side-panel-2 {
+  position: absolute;
+  width: 28%;
+  height: 42%;
+  top: 20%;
+  right: 36%;
+  border-radius: 30px;
+  background: rgba(46, 38, 38, 0.322);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+  padding: 0em 2em;
+  overflow-y: auto;
+}
+
+.submit:hover {
+  background: rgb(104, 190, 201) !important;
+  color: #000;
+}
+
+.search {
+  background: none;
+  border: none;
+  border-bottom: 1px #ccc solid;
+  padding: 0 1em 0.5em 0;
+  width: 80%;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.search::placeholder {
+  color: #ccc;
+}
+
+.side-panel-1 ul {
+  padding: 0 0 0 0;
+  margin: -0.5em 0;
+}
+
+.side-panel-1 ul li {
+  color: #ccc;
+  margin: 1em 0;
+}
+
+.side-panel-1 ul h4 {
+  margin: 2em 0;
+}
+
+.side-panel-2 ul {
+  padding: 0 0 0 0;
+  margin: -0.5em 0;
+}
+
+.side-panel-2 ul li {
+  color: #ccc;
+  margin: 1em 0;
+}
+
+.side-panel-2 ul h4 {
+  margin: 2.5em 0;
+}
+
+.city {
+  display: block;
+  cursor: pointer;
+}
+
+.city:hover {
+  color: #fff;
+}
+
+.details li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-banner {
+  border-bottom: 1px #ccc solid;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+}
+
+@media screen and (max-width: 900px) {
+  .side-panel-1,
+  .container {
+    position: relative;
+    width: 100%;
+    top: initial;
+  }
+  .city-time .condition {
+    margin-left: 185px;
+    margin-top: -80px;
+  }
+  .side-panel-2 {
+    width: 73%;
+    position: relative;
+    top: -369px;
+    right: -200px;
+    border-radius: 3px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+  .city-time .condition {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-height: 300px) {
+  .weather-app {
+    min-height: 40em;
+  }
+}
