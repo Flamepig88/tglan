@@ -26,6 +26,12 @@ body {
   text-decoration: none;
 }
 
+.start-header {
+  color: white;
+  text-align: center;
+  margin-top: -15%;
+}
+
 .link-top:hover {
   background-color: #f5a7d2;
   color: black;
