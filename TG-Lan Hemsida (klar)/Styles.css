@@ -149,20 +149,9 @@ a:hover {
 
 h2 {
   position: relative;
-  padding: 0 0 10px;
+  padding: 0 0 5px;
   margin-bottom: 10px;
   color: #fff;
-}
-
-h2:after {
-  content: "";
-  position: absolute;
-  left: 17%;
-  bottom: 0;
-  height: 4px;
-  width: 66%;
-  border-radius: 2px;
-  background-color: #d5549c;
 }
 
 .field {
@@ -265,7 +254,7 @@ TABLET SIZE
 
   .wrapper {
     padding-top: 20%;
-    padding-bottom: 20%;
+    padding-bottom: 5%;
     width: 750px;
     margin: 0 auto;
   }
@@ -282,11 +271,6 @@ TABLET SIZE
     font-size: 20px;
     margin-top: 30px;
   }
-
-  h2:after {
-    left: 37%;
-    width: 26%;
-  }
 }
 
 .content {
@@ -294,48 +278,6 @@ TABLET SIZE
   justify-content: center;
   justify-content: space-evenly;
 }
-
-/* .information1 {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(40, 40, 40);
-  box-shadow: 0px 0px 5px 3px #632949;
-  border-radius: 5px;
-  width: 300px;
-  height: 450px;
-  margin-top: 200px;
-} */
-
-/* .information1 header {
-  font-size: 30px;
-  position: absolute;
-  color: white;
-  margin-top: 10px;
-} */
-
-/* .information1 li {
-  margin-top: 255px;
-  position: absolute;
-  list-style: none;
-  font-size: 20px;
-  color: white;
-  margin-left: -307.5px;
-  background-color: rgba(34, 34, 34, 0.795);
-  padding: 10px 81.25px 145px 81.25px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 3px 1px #632949;
-} */
-
-/* .information1 header:after {
-  content: "";
-  position: absolute;
-  left: 0%;
-  bottom: 0;
-  height: 4px;
-  width: 100%;
-  border-radius: 2px;
-  background-color: #d5549c;
-} */
 
 .information2 {
   display: flex;
@@ -348,44 +290,26 @@ TABLET SIZE
 }
 
 .information2 li {
+  display: flex;
   width: 950px;
-  height: 750px;
-  margin-top: 220px;
-  position: absolute;
+  height: 850px;
+  margin-top: 120px;
+  position: relative;
   list-style: none;
   font-size: 20px;
   color: white;
-  margin-left: -505px;
+  margin-left: -40px;
   background-color: rgba(34, 34, 34, 0.795);
   padding: 10px 95px 145px 95px;
   border-radius: 3px;
-  box-shadow: 0px 0px 3px 1px #632949;
 }
 
-.information2 header {
-  font-size: 30px;
+.information2 h2 {
+  font-size: 25px;
   position: absolute;
   color: white;
   margin-top: 10px;
 }
-
-.information2 header:after {
-  content: "";
-  position: absolute;
-  left: 0%;
-  bottom: 0;
-  height: 4px;
-  width: 100%;
-  border-radius: 2px;
-  background-color: #d5549c;
-}
-
-/* .image {
-  margin-top: 85px;
-  margin-left: 40px;
-  box-shadow: 0px 0px 8px 5px rgb(24, 24, 24);
-  border-radius: 5px;
-} */
 
 /* 
 
@@ -395,7 +319,7 @@ PC SIZE
 
 @media only screen and (min-width: 1000px) {
   .wrapper {
-    padding-top: 12%;
+    padding-top: 10%;
     width: 1000px;
   }
 
